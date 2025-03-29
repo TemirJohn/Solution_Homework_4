@@ -14,7 +14,7 @@ class ConfigurationManager {
         configurations.put("gameDifficulty", "medium");
     }
 
-    public static synchronized ConfigurationManager getInstance() {
+    public static ConfigurationManager getInstance() {
         if (instance == null) {
             instance = new ConfigurationManager();
         }
