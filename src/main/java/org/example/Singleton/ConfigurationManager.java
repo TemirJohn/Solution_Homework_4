@@ -14,7 +14,7 @@ class ConfigurationManager {
         configurations.put("gameDifficulty", "medium");
     }
 
-    public static synchronized ConfigurationManager getInstance() {
+    public static ConfigurationManager getInstance() {
         if (instance == null) {
             instance = new ConfigurationManager();
         }
@@ -27,5 +27,9 @@ class ConfigurationManager {
 
     public void printAllConfigs() {
         configurations.forEach((key, value) -> System.out.println(key + ": " + value));
+    }
+
+    public void setConfiguration(String key, String value) {
+        configurations.put(key, value);
     }
 }

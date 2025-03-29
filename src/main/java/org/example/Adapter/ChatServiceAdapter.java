@@ -1,7 +1,7 @@
 package org.example.Adapter;
 
 public class ChatServiceAdapter implements ChatService {
-    private final LegacyChatService legacyChatService;
+    private LegacyChatService legacyChatService;
 
     public ChatServiceAdapter(LegacyChatService legacyChatService) {
         this.legacyChatService = legacyChatService;
