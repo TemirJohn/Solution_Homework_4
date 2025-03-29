@@ -8,12 +8,10 @@ public class ConfigManagerDemo {
 
         configManager.printAllConfigs();
 
-
-        configManager.setConfiguration("maxPlayers", "200");
-        configManager.setConfiguration("defaultLanguage", "fr");
-        configManager.setConfiguration("gameDifficulty", "hard");
-
-
+        ConfigurationManager configAdmin = ConfigurationManager.getInstance();
+        configAdmin.setConfiguration("maxPlayers", "200");
+        configAdmin.setConfiguration("defaultLanguage", "fr");
+        configAdmin.setConfiguration("gameDifficulty", "hard");
 
         System.out.println("----------");
         configManager.printAllConfigs();
